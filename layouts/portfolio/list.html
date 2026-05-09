@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' cdn.jsdelivr.net unpkg.com; style-src 'self' fonts.googleapis.com unpkg.com 'unsafe-inline'; font-src fonts.gstatic.com; img-src 'self' data: github-readme-stats.vercel.app; connect-src 'self' api.github.com formspree.io; object-src 'none'; base-uri 'self'; form-action 'self' formspree.io; frame-ancestors 'none';">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>MissQuibble | Full Stack Engineer & Security Specialist</title>
@@ -37,7 +38,9 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+        integrity="sha256-FqmbKGJMBNzDK/gUXOHFwTx7D47MZ3WX28HGXNLWZ+U="
+        crossorigin="anonymous">
 
   <!-- Portfolio CSS -->
   <link rel="stylesheet" href="/css/portfolio.css">
@@ -755,9 +758,13 @@
      SCRIPTS
 ══════════════════════════════════════════════════════════ -->
 <!-- particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+        integrity="sha256-J5/Gy3XdwbCQ3vXO8+f9HJSR1Q8LhPBLDLgIRLq5xE="
+        crossorigin="anonymous" defer></script>
 <!-- AOS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"
+        integrity="sha256-eaHDhq90VuHKNLMHG6DFBaZumIN78cFmxRxUpT5SOOM="
+        crossorigin="anonymous" defer></script>
 <!-- Portfolio JS -->
 <script src="/js/portfolio.js" defer></script>
 
