@@ -163,7 +163,6 @@ function initTerminal() {
       { type: 'out', text: '──────────────────────────────────' },
       { type: 'out', text: 'Role     : Full Stack Engineer & Security Specialist' },
       { type: 'out', text: 'GitHub   : github.com/DomainWarrior' },
-      { type: 'out', text: 'Twitter  : @AylissaHeart' },
       { type: 'out', text: 'Location : Available Worldwide (Remote)' },
       { type: 'out success', text: 'Status   : ● Open to opportunities' }
     ],
@@ -200,7 +199,6 @@ function initTerminal() {
       { type: 'out success', text: '✓ Connection established' },
       { type: 'out', text: '' },
       { type: 'out accent', text: 'Email    : via contact form ↓' },
-      { type: 'out accent', text: 'Twitter  : @AylissaHeart' },
       { type: 'out accent', text: 'GitHub   : github.com/DomainWarrior' },
       { type: 'out', text: '' },
       { type: 'out', text: 'Response time: typically within 24 hours' }

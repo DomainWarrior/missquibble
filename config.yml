@@ -142,10 +142,6 @@ menu:
       name: 🔍
       url: /search/
       weight: 40
-    - identifier: twitch
-      name: Twitch
-      url: https://www.twitch.tv/yourdestinyis
-      weight: 50
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
@@ -159,8 +155,6 @@ privacy:
   googleAnalytics:
     disable: true
     respectDoNotTrack: true
-  x:
-    enableDNT: true
   youtube:
     privacyEnhanced: true
   vimeo:

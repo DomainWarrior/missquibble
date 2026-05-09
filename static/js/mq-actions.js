@@ -117,9 +117,7 @@ function setSaved(val) {
 
 /* ── Share ─────────────────────────────────────────────────── */
 function setupShare() {
-  const xEl   = document.getElementById('mq-share-x');
   const hiveEl = document.getElementById('mq-share-hive');
-  if (xEl)    xEl.href    = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`;
   if (hiveEl) hiveEl.href = `https://ecency.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
 }
 
