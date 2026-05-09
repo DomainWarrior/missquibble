@@ -1,6 +1,7 @@
 baseURL: "https://missquibble.com/"
 title: Home
-paginate: 5
+pagination:
+  pagerSize: 5
 theme: PaperMod
 
 enableRobotsTXT: true
@@ -141,7 +142,7 @@ privacy:
   googleAnalytics:
     disable: true
     respectDoNotTrack: true
-  twitter:
+  x:
     enableDNT: true
   youtube:
     privacyEnhanced: true
