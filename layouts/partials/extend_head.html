@@ -3,12 +3,59 @@
 {{- if and $url $key }}
 <script>
   window.__MQ = {
-    url:  {{ $url | jsonify }},
-    key:  {{ $key | jsonify }},
-    slug: {{ .RelPermalink | jsonify }},
+    url:   {{ $url | jsonify }},
+    key:   {{ $key | jsonify }},
+    slug:  {{ .RelPermalink | jsonify }},
     title: {{ .Title | jsonify }},
-    desc: {{ .Description | jsonify }}
+    desc:  {{ .Description | jsonify }}
   };
 </script>
 {{ end -}}
 <link rel="stylesheet" href="/css/mq-actions.css">
+
+{{/* JSON-LD structured data */}}
+{{- if and .IsPage (eq .Section "posts") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ .Description | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "author": {
+    "@type": "Person",
+    "name": "MissQuibble",
+    "url": "https://missquibble.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "MissQuibble",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://missquibble.com/dezzis.png"
+    }
+  }{{ with .Params.tags }},
+  "keywords": {{ . | jsonify }}{{ end }}
+}
+</script>
+{{- else if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "MissQuibble",
+  "url": "https://missquibble.com",
+  "description": "Full stack developer, cybersecurity specialist, and content creator.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://missquibble.com/search/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+{{- end }}

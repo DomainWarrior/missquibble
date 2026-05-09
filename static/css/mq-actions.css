@@ -390,6 +390,94 @@ body.mq-no-scroll { overflow: hidden; }
 .mq-rl-remove:hover { color: var(--mq-red); border-color: rgba(239,68,68,.4); }
 
 /* ════════════════════════════════════════════════════════════
+   READING PROGRESS BAR
+════════════════════════════════════════════════════════════ */
+#mq-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--mq-green), var(--mq-cyan));
+  z-index: 9999;
+  transition: width .08s linear;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(0,255,136,.5);
+}
+
+/* ════════════════════════════════════════════════════════════
+   RELATED POSTS
+════════════════════════════════════════════════════════════ */
+.mq-related {
+  max-width: 720px;
+  margin: 48px auto 0;
+  padding: 0 16px;
+}
+
+.mq-related-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mq-text);
+  margin: 0 0 16px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: .02em;
+}
+.mq-related-title::before {
+  content: '// ';
+  color: var(--mq-green);
+}
+
+.mq-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.mq-related-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255,255,255,.025);
+  border: 1px solid var(--mq-border);
+  border-radius: var(--mq-radius);
+  text-decoration: none;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.mq-related-card:hover {
+  border-color: rgba(0,255,136,.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+}
+
+.mq-related-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--mq-green);
+  background: rgba(0,255,136,.08);
+  border: 1px solid rgba(0,255,136,.2);
+  border-radius: 4px;
+  padding: 2px 7px;
+  align-self: flex-start;
+}
+
+.mq-related-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mq-text);
+  line-height: 1.4;
+}
+
+.mq-related-meta {
+  font-size: 11px;
+  color: var(--mq-muted);
+  font-family: 'JetBrains Mono', monospace;
+  margin-top: auto;
+}
+
+/* ════════════════════════════════════════════════════════════
    COMMENTS
 ════════════════════════════════════════════════════════════ */
 .mq-comments {

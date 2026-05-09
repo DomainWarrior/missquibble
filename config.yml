@@ -16,10 +16,25 @@ minify:
   minifyOutput: true
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
+  home:
+    - HTML
+    - RSS
+    - JSON
+  page:
+    - HTML
+  section:
+    - HTML
+    - RSS
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: true
+  indices:
+    - name: tags
+      weight: 100
+    - name: categories
+      weight: 50
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -100,17 +115,15 @@ params:
   #   Text: "Suggest Changes"
   #   appendFilePath: true
 
-  # for search
-  # https://fusejs.io/api/options.html
-#  fuseOpts:
- #   isCaseSensitive: false
-  #  shouldSort: true
-   # location: 0
-   # distance: 1000
-  #  threshold: 0.4
-  #  minMatchCharLength: 0
- #   limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
- #   keys: ["title", "permalink", "summary", "content"]
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 3
+    limit: 12
+    keys: ["title", "permalink", "summary", "content", "tags"]
 menu:
   main:
     - identifier: portfolio
@@ -120,15 +133,19 @@ menu:
     - identifier: categories
       name: categories
       url: /categories/
-      weight: 10
+      weight: 20
     - identifier: tags
       name: tags
       url: /tags/
-      weight: 20
+      weight: 30
+    - identifier: search
+      name: 🔍
+      url: /search/
+      weight: 40
     - identifier: twitch
       name: Twitch
       url: https://www.twitch.tv/yourdestinyis
-      weight: 30
+      weight: 50
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

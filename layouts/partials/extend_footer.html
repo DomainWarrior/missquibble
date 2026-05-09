@@ -1,3 +1,8 @@
+{{/* Reading progress bar */}}
+{{- if and .IsPage (eq .Section "posts") -}}
+<div id="mq-progress" aria-hidden="true"></div>
+{{- end }}
+
 {{/* Action bar — single posts only */}}
 {{- if and .IsPage (eq .Section "posts") }}
 <div id="mq-action-bar" class="mq-action-bar" role="toolbar" aria-label="Post actions">
@@ -83,5 +88,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" crossorigin="anonymous"></script>
-<script src="/js/mq-auth.js"    defer></script>
-<script src="/js/mq-actions.js" defer></script>
+<script src="/js/mq-auth.js"     defer></script>
+<script src="/js/mq-actions.js"  defer></script>
+<script src="/js/mq-progress.js" defer></script>

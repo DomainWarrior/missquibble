@@ -1,0 +1,19 @@
+{{- $related := first 3 (where (.Site.RegularPages.Related .) "Section" "posts") -}}
+{{- with $related }}
+<aside class="mq-related" aria-label="Related posts">
+  <h3 class="mq-related-title">Related Posts</h3>
+  <div class="mq-related-grid">
+    {{- range . }}
+    <a href="{{ .RelPermalink }}" class="mq-related-card">
+      {{- with index .Params.tags 0 }}
+      <span class="mq-related-tag">{{ . }}</span>
+      {{- end }}
+      <span class="mq-related-name">{{ .Title }}</span>
+      <span class="mq-related-meta">
+        {{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} min read
+      </span>
+    </a>
+    {{- end }}
+  </div>
+</aside>
+{{- end }}
