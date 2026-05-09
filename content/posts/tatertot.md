@@ -5,6 +5,7 @@ date: 2024-03-01T11:28:59-05:00
 tags: ["cooking", "kidfriendly", "food", "casserole"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/cooking.jpg"
 slug: "tatertot"
 seoKeywords:
   - tater tot casserole recipe

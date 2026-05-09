@@ -5,6 +5,7 @@ date: 2023-10-09T11:41:41-04:00
 tags: ["productivity", "life", "organization"]
 categories: ["code", "life"]
 draft: false
+featuredImage: "/posts/images/productivity.jpg"
 slug: "whatarethe5s"
 seoKeywords:
   - 5S methodology

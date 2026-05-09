@@ -5,6 +5,7 @@ date: 2026-06-18T10:00:00-04:00
 tags: ["docker", "devops", "containers", "beginner", "web development"]
 categories: ["DevOps", "Programming"]
 draft: false
+featuredImage: "/posts/images/sample-code.jpeg"
 slug: "docker-for-developers"
 seoKeywords:
   - Docker beginner tutorial

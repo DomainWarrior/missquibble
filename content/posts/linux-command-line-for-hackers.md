@@ -5,6 +5,7 @@ date: 2026-05-08T10:00:00-04:00
 tags: ["linux", "cybersecurity", "hacking", "command line", "terminal"]
 categories: ["Cybersecurity", "Programming"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "linux-command-line-for-hackers"
 seoKeywords:
   - Linux command line for hackers

@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["entrepreneurship", "digital business", "online income", "beginner", "side hustle"]
 categories: ["digital entrepreneurship", "online income guides"]
 draft: false
+featuredImage: "/posts/images/business.jpg"
 slug: "start-digital-business-no-money"
 seoKeywords:
   - how to start a digital business with no money

@@ -5,6 +5,7 @@ date: 2026-08-13T10:00:00-04:00
 tags: ["python", "fastapi", "REST API", "web development", "tutorial"]
 categories: ["Python", "Web Development"]
 draft: false
+featuredImage: "/posts/images/python.jpeg"
 slug: "fastapi-rest-api-tutorial"
 seoKeywords:
   - FastAPI tutorial beginner

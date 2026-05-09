@@ -5,6 +5,7 @@ date: 2026-07-30T10:00:00-04:00
 tags: ["cybersecurity", "CTF", "hacking", "beginner", "ethical hacking"]
 categories: ["Cybersecurity"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "how-to-solve-ctf-challenges"
 seoKeywords:
   - CTF challenge beginner guide

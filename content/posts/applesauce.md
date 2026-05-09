@@ -5,6 +5,7 @@ date: 2024-03-10T12:02:32-05:00
 tags: ["cooking", "kidfriendly", "food", "apples", "snack"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/cooking.jpg"
 slug: "applesauce"
 seoKeywords:
   - homemade applesauce recipe

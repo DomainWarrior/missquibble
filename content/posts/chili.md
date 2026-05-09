@@ -5,6 +5,7 @@ date: 2024-03-04T11:52:29-05:00
 tags: ["cooking", "kidfriendly", "food", "soups", "crockpot"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/meatballs.jpeg"
 slug: "chili"
 seoKeywords:
   - homemade chili recipe

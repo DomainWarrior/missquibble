@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["AI", "tools", "productivity", "technology", "learning"]
 categories: ["AI tools and tutorials", "productivity"]
 draft: false
+featuredImage: "/posts/images/ai.jpg"
 slug: "ai-tools-changing-work-2026"
 seoKeywords:
   - best AI tools 2026

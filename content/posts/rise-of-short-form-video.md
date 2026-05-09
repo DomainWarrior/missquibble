@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["internet culture", "TikTok", "social media", "trends", "content creation"]
 categories: ["internet culture and trends", "social media growth strategies"]
 draft: false
+featuredImage: "/posts/images/social-media.jpg"
 slug: "rise-of-short-form-video"
 seoKeywords:
   - rise of short-form video

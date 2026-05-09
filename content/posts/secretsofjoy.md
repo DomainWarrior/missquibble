@@ -5,6 +5,7 @@ date: 2023-10-06T15:45:22-04:00
 tags: ["life", "happiness", "personal development"]
 categories: ["Personal Development"]
 draft: false
+featuredImage: "/posts/images/lifestyle.jpg"
 slug: "secretsofjoy"
 seoKeywords:
   - how to be happy

@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["study techniques", "learning", "students", "productivity", "education"]
 categories: ["study techniques and learning hacks", "productivity hacks for students"]
 draft: false
+featuredImage: "/posts/images/productivity.jpg"
 slug: "science-backed-study-techniques"
 seoKeywords:
   - science-backed study techniques

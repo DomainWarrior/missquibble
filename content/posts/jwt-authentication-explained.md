@@ -5,6 +5,7 @@ date: 2026-07-16T10:00:00-04:00
 tags: ["cybersecurity", "web development", "authentication", "JWT", "API"]
 categories: ["Cybersecurity", "Web Development"]
 draft: false
+featuredImage: "/posts/images/sample-code.jpeg"
 slug: "jwt-authentication-explained"
 seoKeywords:
   - JWT authentication explained

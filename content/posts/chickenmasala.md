@@ -5,6 +5,7 @@ date: 2024-03-10T13:29:05-05:00
 tags: ["cooking", "kidfriendly", "food", "indian", "chicken"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/chicken.jpg"
 slug: "chickenmasala"
 seoKeywords:
   - chicken masala recipe

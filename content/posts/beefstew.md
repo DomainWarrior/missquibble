@@ -5,6 +5,7 @@ date: 2024-03-05T11:54:40-05:00
 tags: ["cooking", "kidfriendly", "food", "soups", "crockpot"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/meatballs.jpeg"
 slug: "beefstew"
 seoKeywords:
   - homemade beef stew recipe

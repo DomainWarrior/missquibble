@@ -5,6 +5,7 @@ date: 2024-03-08T13:19:07-05:00
 tags: ["cooking", "kidfriendly", "food", "pasta", "italian"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/cooking.jpg"
 slug: "stuffedshells"
 seoKeywords:
   - stuffed shells recipe

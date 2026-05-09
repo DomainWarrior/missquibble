@@ -5,6 +5,7 @@ date: 2026-05-08T12:00:00-04:00
 tags: ["cybersecurity", "career", "beginner", "certifications", "ethical hacking"]
 categories: ["Cybersecurity"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "how-to-get-into-cybersecurity-2026"
 seoKeywords:
   - how to get into cybersecurity 2026

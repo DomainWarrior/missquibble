@@ -5,6 +5,7 @@ date: 2023-10-06T15:46:31-04:00
 tags: ["life", "philosophy", "personal development"]
 categories: ["Personal Development"]
 draft: false
+featuredImage: "/posts/images/lifestyle.jpg"
 slug: "meaningoflife"
 seoKeywords:
   - meaning of life

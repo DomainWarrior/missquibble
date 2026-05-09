@@ -5,6 +5,7 @@ date: 2026-10-22T10:00:00-04:00
 tags: ["web development", "API", "REST", "GraphQL", "architecture"]
 categories: ["Web Development", "Programming"]
 draft: false
+featuredImage: "/posts/images/sample-code.jpeg"
 slug: "rest-vs-graphql"
 seoKeywords:
   - REST vs GraphQL comparison

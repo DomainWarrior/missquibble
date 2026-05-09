@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["side hustle", "teens", "young adults", "income", "entrepreneurship", "make money"]
 categories: ["side hustles for teens and young adults", "online income guides"]
 draft: false
+featuredImage: "/posts/images/business.jpg"
 slug: "side-hustles-for-teens-young-adults"
 seoKeywords:
   - side hustles for teens

@@ -5,6 +5,7 @@ date: 2023-10-09T12:52:26-04:00
 tags: ["crypto", "hive", "gaming", "guide"]
 categories: ["Blockchain"]
 draft: true
+featuredImage: "/posts/images/hive.PNG"
 slug: "risingstarhow2"
 seoKeywords:
   - Rising Star Game guide

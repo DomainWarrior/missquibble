@@ -5,6 +5,7 @@ date: 2026-05-08T11:00:00-04:00
 tags: ["python", "automation", "programming", "productivity", "scripting"]
 categories: ["Programming"]
 draft: false
+featuredImage: "/posts/images/python.jpeg"
 slug: "python-automation-scripts-for-developers"
 seoKeywords:
   - Python automation scripts 2026

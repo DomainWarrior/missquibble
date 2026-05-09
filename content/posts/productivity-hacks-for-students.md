@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["productivity", "students", "study tips", "personal development", "time management"]
 categories: ["productivity hacks for students", "personal development"]
 draft: false
+featuredImage: "/posts/images/productivity.jpg"
 slug: "productivity-hacks-for-students"
 seoKeywords:
   - productivity hacks for students

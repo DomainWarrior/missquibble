@@ -5,6 +5,7 @@ date: 2026-09-24T10:00:00-04:00
 tags: ["typescript", "javascript", "web development", "programming", "tutorial"]
 categories: ["JavaScript", "Web Development"]
 draft: false
+featuredImage: "/posts/images/sample-code.jpeg"
 slug: "typescript-for-javascript-developers"
 seoKeywords:
   - TypeScript for JavaScript developers

@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["personal development", "habits", "self improvement", "productivity", "mindset"]
 categories: ["personal development", "productivity hacks for students"]
 draft: false
+featuredImage: "/posts/images/productivity.jpg"
 slug: "habit-loop-build-habits-that-stick"
 seoKeywords:
   - how to build habits that stick

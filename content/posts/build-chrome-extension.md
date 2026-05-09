@@ -5,6 +5,7 @@ date: 2026-10-08T10:00:00-04:00
 tags: ["javascript", "chrome extension", "web development", "browser", "tutorial"]
 categories: ["JavaScript", "Web Development"]
 draft: false
+featuredImage: "/posts/images/sample-code.jpeg"
 slug: "build-chrome-extension"
 seoKeywords:
   - build Chrome extension tutorial

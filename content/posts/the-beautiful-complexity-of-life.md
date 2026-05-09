@@ -5,6 +5,7 @@ date: 2023-10-09T17:23:15-04:00
 tags: ["life", "philosophy", "personal development"]
 categories: ["Personal Development"]
 draft: true
+featuredImage: "/posts/images/lifestyle.jpg"
 slug: "the-beautiful-complexity-of-life"
 seoKeywords:
   - beauty of life

@@ -5,6 +5,7 @@ date: 2024-03-09T13:21:54-05:00
 tags: ["cooking", "kidfriendly", "food", "beef"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/meatballs.jpeg"
 slug: "meatloaf"
 seoKeywords:
   - classic meatloaf recipe

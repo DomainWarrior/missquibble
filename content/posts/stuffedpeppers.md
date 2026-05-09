@@ -5,6 +5,7 @@ date: 2024-03-12T09:54:40-05:00
 tags: ["cooking", "kidfriendly", "food", "beef"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/cooking.jpg"
 slug: "stuffedpeppers"
 seoKeywords:
   - stuffed bell peppers recipe

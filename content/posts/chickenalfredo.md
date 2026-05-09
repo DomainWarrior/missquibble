@@ -5,6 +5,7 @@ date: 2024-03-07T09:30:25-05:00
 tags: ["cooking", "kidfriendly", "food", "pasta", "leftovers"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/chicken.jpg"
 slug: "chickenalfredo"
 seoKeywords:
   - chicken alfredo recipe

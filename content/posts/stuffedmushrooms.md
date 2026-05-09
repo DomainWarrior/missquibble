@@ -5,6 +5,7 @@ date: 2024-03-15T13:51:54-05:00
 tags: ["cooking", "food", "appetizer", "mushrooms"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/cooking.jpg"
 slug: "stuffedmushrooms"
 seoKeywords:
   - stuffed mushrooms recipe

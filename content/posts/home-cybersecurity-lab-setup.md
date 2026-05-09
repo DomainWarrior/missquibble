@@ -5,6 +5,7 @@ date: 2026-05-21T10:00:00-04:00
 tags: ["cybersecurity", "homelab", "networking", "beginner"]
 categories: ["Cybersecurity"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "home-cybersecurity-lab-setup"
 seoKeywords:
   - home cybersecurity lab setup

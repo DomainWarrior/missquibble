@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["online income", "make money online", "side hustle", "digital entrepreneurship", "freelancing"]
 categories: ["online income guides", "digital entrepreneurship"]
 draft: false
+featuredImage: "/posts/images/business.jpg"
 slug: "ways-to-make-money-online-2026"
 seoKeywords:
   - ways to make money online 2026

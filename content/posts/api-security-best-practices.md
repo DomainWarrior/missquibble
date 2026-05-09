@@ -5,6 +5,7 @@ date: 2026-05-08T09:00:00-04:00
 tags: ["cybersecurity", "API", "web development", "backend", "security"]
 categories: ["Cybersecurity", "Programming"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "api-security-best-practices"
 seoKeywords:
   - API security best practices 2026

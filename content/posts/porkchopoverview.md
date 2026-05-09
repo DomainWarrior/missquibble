@@ -5,6 +5,7 @@ date: 2024-03-06T11:59:34-05:00
 tags: ["cooking", "kidfriendly", "food", "pork"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/pulledpork.jpg"
 slug: "porkchopoverview"
 seoKeywords:
   - pork chop recipe

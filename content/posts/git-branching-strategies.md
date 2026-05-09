@@ -5,6 +5,7 @@ date: 2026-08-27T10:00:00-04:00
 tags: ["git", "devops", "programming", "version control", "workflow"]
 categories: ["DevOps", "Programming"]
 draft: false
+featuredImage: "/posts/images/sample-code.jpeg"
 slug: "git-branching-strategies"
 seoKeywords:
   - Git branching strategies

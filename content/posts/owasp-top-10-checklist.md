@@ -5,6 +5,7 @@ date: 2026-09-10T10:00:00-04:00
 tags: ["cybersecurity", "OWASP", "web development", "security checklist"]
 categories: ["Cybersecurity", "Web Development"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "owasp-top-10-checklist"
 seoKeywords:
   - OWASP Top 10 explained

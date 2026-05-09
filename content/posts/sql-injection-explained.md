@@ -5,6 +5,7 @@ date: 2026-06-04T10:00:00-04:00
 tags: ["cybersecurity", "web development", "SQL", "OWASP"]
 categories: ["Cybersecurity", "Web Development"]
 draft: false
+featuredImage: "/posts/images/binarycode.jpeg"
 slug: "sql-injection-explained"
 seoKeywords:
   - SQL injection explained

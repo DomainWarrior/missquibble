@@ -5,6 +5,7 @@ date: 2024-03-11T09:52:48-05:00
 tags: ["cooking", "kidfriendly", "food", "beef", "pasta"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/programming.jpeg"
 slug: "beefstrogonaff"
 seoKeywords:
   - beef stroganoff recipe

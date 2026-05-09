@@ -5,6 +5,7 @@ date: 2023-10-09T12:45:34-04:00
 tags: ["crypto", "hive", "gaming", "play to earn"]
 categories: ["Blockchain"]
 draft: true
+featuredImage: "/posts/images/hive.PNG"
 slug: "risingstar"
 seoKeywords:
   - Rising Star Game

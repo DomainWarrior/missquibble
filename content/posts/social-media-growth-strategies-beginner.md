@@ -5,6 +5,7 @@ date: 2026-05-07T00:00:00-04:00
 tags: ["social media", "growth", "content creation", "marketing", "beginner"]
 categories: ["social media growth strategies", "digital entrepreneurship"]
 draft: false
+featuredImage: "/posts/images/social-media.jpg"
 slug: "social-media-growth-strategies-beginner"
 seoKeywords:
   - how to grow social media following

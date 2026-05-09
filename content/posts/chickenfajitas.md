@@ -5,6 +5,7 @@ date: 2024-03-08T13:25:06-05:00
 tags: ["cooking", "kidfriendly", "food", "mexican", "chicken"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/chicken.jpg"
 slug: "chickenfajitas"
 seoKeywords:
   - chicken fajita recipe

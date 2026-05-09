@@ -5,6 +5,7 @@ date: 2023-10-09T15:04:01-04:00
 tags: ["code", "web development", "hire developer"]
 categories: ["Programming","About Me"]
 draft: false
+featuredImage: "/posts/images/lifestyle.jpg"
 slug: "choseme"
 seoKeywords:
   - full stack web developer for hire

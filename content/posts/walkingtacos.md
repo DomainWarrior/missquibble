@@ -5,6 +5,7 @@ date: 2024-03-02T11:45:56-05:00
 tags: ["cooking", "kidfriendly", "food", "tacos"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/taco-salad.jpg"
 slug: "walkingtacos"
 seoKeywords:
   - walking taco recipe

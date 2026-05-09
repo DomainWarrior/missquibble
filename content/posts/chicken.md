@@ -5,6 +5,7 @@ date: 2024-02-29T11:15:19-05:00
 tags: ["cooking", "kidfriendly", "food", "chicken"]
 categories: ["Recipes"]
 draft: false
+featuredImage: "/posts/images/chicken.jpg"
 slug: "chicken"
 seoKeywords:
   - herb roasted chicken recipe

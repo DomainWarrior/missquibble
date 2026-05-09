@@ -5,6 +5,7 @@ date: 2026-07-02T10:00:00-04:00
 tags: ["python", "web scraping", "beautifulsoup", "automation", "tutorial"]
 categories: ["Python", "Programming"]
 draft: false
+featuredImage: "/posts/images/python.jpeg"
 slug: "python-web-scraping-beautifulsoup"
 seoKeywords:
   - Python web scraping tutorial
