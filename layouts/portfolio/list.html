@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <title>MissQuibble | Full Stack Engineer & Security Specialist</title>
+  <meta name="description" content="Portfolio of MissQuibble — Full Stack Engineer, Cybersecurity Specialist &amp; Web Developer with 13+ years building secure, scalable applications.">
+  <meta name="keywords" content="full stack developer, cybersecurity, web development, Python, Django, JavaScript, React, portfolio, blockchain, Hive">
+  <meta name="author" content="MissQuibble">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://missquibble.com/portfolio/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://missquibble.com/portfolio/">
+  <meta property="og:title"       content="MissQuibble | Full Stack Engineer & Security Specialist">
+  <meta property="og:description" content="13+ years building secure, scalable web applications. Cybersecurity · Full Stack · Blockchain.">
+  <meta property="og:site_name"   content="MissQuibble">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="MissQuibble | Portfolio">
+  <meta name="twitter:description" content="Full Stack Engineer & Cybersecurity Specialist">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- Portfolio CSS -->
+  <link rel="stylesheet" href="/css/portfolio.css">
+</head>
+
+<body>
+
+<!-- Matrix canvas (background effect) -->
+<canvas id="matrix-canvas"></canvas>
+
+<!-- ══════════════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════════════ -->
+<a href="#hero" class="skip-nav">Skip to main content</a>
+
+<nav id="pf-nav" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="/portfolio/" class="nav-logo" aria-label="MissQuibble Home">MQ<span style="color:var(--cyan)">.</span></a>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#terminal">Terminal</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#github">GitHub</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/" style="color:var(--neon)">← Main Site</a></li>
+    </ul>
+
+    <div style="display:flex;align-items:center;gap:12px;">
+      <button id="theme-toggle" aria-label="Toggle colour theme">☀️</button>
+      <button class="nav-mobile-toggle" id="nav-mobile-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Introduction">
+  <div id="particles-js" aria-hidden="true"></div>
+  <div class="hero-gradient hero-gradient-1" aria-hidden="true"></div>
+  <div class="hero-gradient hero-gradient-2" aria-hidden="true"></div>
+  <div class="scan-line"               aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="status-dot" aria-hidden="true"></span>
+        Available for freelance &amp; consulting
+      </div>
+
+      <h1 class="hero-name">
+        Miss<span class="neon-text">Quibble</span>
+      </h1>
+
+      <div class="hero-typewriter" aria-live="polite">
+        <span id="typewriter"></span><span class="cursor" aria-hidden="true"></span>
+      </div>
+
+      <p class="hero-bio">
+        Full Stack Engineer &amp; Cybersecurity Specialist with 13+ years crafting secure,
+        scalable web applications. Passionate about blockchain technology, Python automation,
+        and helping businesses build a stronger digital presence.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects ↓</a>
+        <a href="#contact"  class="btn">Get In Touch</a>
+        <a href="/"         class="btn btn-sm" style="opacity:.7;">Blog</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>SCROLL</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     ABOUT
+══════════════════════════════════════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Avatar column -->
+      <div class="about-avatar-wrap" data-aos="fade-right">
+        <div class="about-avatar-glow" aria-hidden="true"></div>
+        <div class="about-avatar" role="img" aria-label="MissQuibble avatar">
+          🛡️
+          <div class="about-badge">OPEN TO WORK</div>
+        </div>
+
+        <!-- Cyber metrics dashboard -->
+        <div class="cyber-dashboard" data-aos="fade-up" data-aos-delay="200">
+          <p class="cyber-dashboard-title">// Security Proficiency</p>
+          <div class="cyber-metrics">
+            <div class="cyber-metric">
+              <div class="cyber-metric-header">
+                <span class="cyber-metric-name">Web Security</span>
+                <span class="cyber-metric-val">94%</span>
+              </div>
+              <div class="cyber-bar"><div class="cyber-bar-fill" data-width="94"></div></div>
+            </div>
+            <div class="cyber-metric">
+              <div class="cyber-metric-header">
+                <span class="cyber-metric-name">Pen Testing</span>
+                <span class="cyber-metric-val">82%</span>
+              </div>
+              <div class="cyber-bar"><div class="cyber-bar-fill" data-width="82"></div></div>
+            </div>
+            <div class="cyber-metric">
+              <div class="cyber-metric-header">
+                <span class="cyber-metric-name">Network Sec</span>
+                <span class="cyber-metric-val">78%</span>
+              </div>
+              <div class="cyber-bar"><div class="cyber-bar-fill" data-width="78"></div></div>
+            </div>
+            <div class="cyber-metric">
+              <div class="cyber-metric-header">
+                <span class="cyber-metric-name">OSINT</span>
+                <span class="cyber-metric-val">88%</span>
+              </div>
+              <div class="cyber-bar"><div class="cyber-bar-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text column -->
+      <div data-aos="fade-left">
+        <span class="section-tag">// about me</span>
+        <h2 id="about-heading" class="section-title">
+          Building the web.<br><span class="neon-text">Securing it too.</span>
+        </h2>
+        <div class="divider"></div>
+
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">
+          I'm MissQuibble — a full stack web developer and cybersecurity specialist
+          with over 13 years of hands-on experience. I've built everything from
+          small business websites to complex blockchain-integrated platforms, always
+          with security and performance at the forefront.
+        </p>
+        <p style="color:var(--muted);line-height:1.8;margin-bottom:32px;">
+          My work spans frontend and backend development, blockchain technology
+          (Hive ecosystem), Python automation, and web security auditing. When I'm
+          not coding, I'm writing tutorials on this very blog or crafting custom
+          designs with my Cricut — because creativity never stops at the terminal.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="13" data-suffix="+">0+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="50" data-suffix="+">0+</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat-card glass">
+            <span class="stat-num" data-count="100" data-suffix="+">0+</span>
+            <span class="stat-label">Blog Posts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SKILLS
+══════════════════════════════════════════════════════════ -->
+<section id="skills" aria-labelledby="skills-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;" data-aos="fade-up">
+      <span class="section-tag">// tech stack</span>
+      <h2 id="skills-heading" class="section-title">
+        Tools I <span class="neon-text">wield</span>
+      </h2>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="glass skill-group" data-aos="fade-up" data-aos-delay="0">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-tags">
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Vue.js</span>
+          <span class="skill-tag">Angular</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">Responsive Design</span>
+          <span class="skill-tag">Accessibility</span>
+        </div>
+      </div>
+
+      <div class="glass skill-group" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-group-title" style="color:var(--cyan)">Backend &amp; APIs</div>
+        <div class="skill-tags">
+          <span class="skill-tag cyan">Python</span>
+          <span class="skill-tag cyan">Django</span>
+          <span class="skill-tag cyan">Node.js</span>
+          <span class="skill-tag cyan">PHP</span>
+          <span class="skill-tag cyan">Ruby</span>
+          <span class="skill-tag cyan">REST APIs</span>
+          <span class="skill-tag cyan">GraphQL</span>
+          <span class="skill-tag cyan">PostgreSQL</span>
+          <span class="skill-tag cyan">MySQL</span>
+          <span class="skill-tag cyan">SQLite</span>
+        </div>
+      </div>
+
+      <div class="glass skill-group" data-aos="fade-up" data-aos-delay="200">
+        <div class="skill-group-title" style="color:var(--purple)">Cybersecurity</div>
+        <div class="skill-tags">
+          <span class="skill-tag purple">Penetration Testing</span>
+          <span class="skill-tag purple">OWASP Top 10</span>
+          <span class="skill-tag purple">Burp Suite</span>
+          <span class="skill-tag purple">Nmap</span>
+          <span class="skill-tag purple">Wireshark</span>
+          <span class="skill-tag purple">OSINT</span>
+          <span class="skill-tag purple">CTF Challenges</span>
+          <span class="skill-tag purple">Security Auditing</span>
+          <span class="skill-tag purple">Network Security</span>
+        </div>
+      </div>
+
+      <div class="glass skill-group" data-aos="fade-up" data-aos-delay="300">
+        <div class="skill-group-title">Blockchain &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Hive Blockchain</span>
+          <span class="skill-tag">Web3</span>
+          <span class="skill-tag">Smart Contracts</span>
+          <span class="skill-tag">DApps</span>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">Docker</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Hugo</span>
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">Supabase</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     TERMINAL
+══════════════════════════════════════════════════════════ -->
+<section id="terminal" aria-labelledby="terminal-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 48px;" data-aos="fade-up">
+      <span class="section-tag">// interactive</span>
+      <h2 id="terminal-heading" class="section-title">
+        Talk to <span class="neon-text">the terminal</span>
+      </h2>
+      <p style="color:var(--muted);font-size:15px;margin-top:12px;">
+        Type a command below. Try <code style="color:var(--neon);font-family:'JetBrains Mono',monospace;">help</code>,
+        <code style="color:var(--neon);font-family:'JetBrains Mono',monospace;">skills</code>, or
+        <code style="color:var(--neon);font-family:'JetBrains Mono',monospace;">projects</code>.
+      </p>
+    </div>
+
+    <div class="terminal-wrap" data-aos="fade-up" data-aos-delay="100">
+      <div class="terminal-window" role="region" aria-label="Interactive terminal">
+        <div class="terminal-titlebar" aria-hidden="true">
+          <div class="t-dot" style="background:#ff5f56"></div>
+          <div class="t-dot" style="background:#ffbd2e"></div>
+          <div class="t-dot" style="background:#27c93f"></div>
+          <span class="terminal-title">missquibble@portfolio:~ — bash</span>
+        </div>
+
+        <div class="terminal-body" id="terminal-body" aria-live="polite" aria-label="Terminal output"></div>
+
+        <div class="terminal-input-bar">
+          <span class="t-prompt" aria-hidden="true">❯</span>
+          <input
+            type="text"
+            id="terminal-input"
+            class="terminal-input"
+            placeholder="type a command and press Enter..."
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Terminal command input"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     TIMELINE
+══════════════════════════════════════════════════════════ -->
+<section id="timeline" style="background:var(--dark2);" aria-labelledby="timeline-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;" data-aos="fade-up">
+      <span class="section-tag">// journey</span>
+      <h2 id="timeline-heading" class="section-title">
+        The <span class="neon-text">timeline</span>
+      </h2>
+    </div>
+
+    <div class="timeline" data-aos="fade-up">
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2010</div>
+        <div class="tl-card glass">
+          <h3>The Beginning</h3>
+          <p>Wrote my first lines of HTML and CSS. Immediately hooked. Built small personal websites and started learning JavaScript fundamentals.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2013</div>
+        <div class="tl-card glass">
+          <h3>Going Professional</h3>
+          <p>Delivered first paid client projects — responsive business websites and e-commerce solutions. Expanded into Python and backend development.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2016</div>
+        <div class="tl-card glass">
+          <h3>Full Stack Mastery</h3>
+          <p>Mastered Django, Node.js, and React. Started building complex multi-tier web applications and REST APIs for businesses of all sizes.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2019</div>
+        <div class="tl-card glass">
+          <h3>Cybersecurity Focus</h3>
+          <p>Deepened expertise in web security — OWASP vulnerabilities, penetration testing, security auditing. Started integrating security-first practices into every project.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2020</div>
+        <div class="tl-card glass">
+          <h3>Blockchain &amp; Web3</h3>
+          <p>Discovered the Hive blockchain ecosystem. Built multiple DApps, contributed to the Hive community, and dove deep into decentralized technology.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2023 – Now</div>
+        <div class="tl-card glass">
+          <h3>Freelance Consulting &amp; Content</h3>
+          <p>Full-time freelance — building client projects, writing technical tutorials, growing MissQuibble.com, and sharing knowledge across tech, cooking, crafts, and crypto.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot" aria-hidden="true"></div>
+        <div class="tl-year">2026 – Present</div>
+        <div class="tl-card glass">
+          <h3>College</h3>
+          <p>Pursuing formal higher education while continuing to build, ship, and write. Combining academic learning with 13+ years of real-world engineering experience.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     PROJECTS
+══════════════════════════════════════════════════════════ -->
+<section id="projects" aria-labelledby="projects-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;" data-aos="fade-up">
+      <span class="section-tag">// case studies</span>
+      <h2 id="projects-heading" class="section-title">
+        Featured <span class="neon-text">work</span>
+      </h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-icon" aria-hidden="true">⛓️</div>
+        <h3>Hive Blockchain Suite</h3>
+        <p>A collection of DApps, content creation tools, and social platform integrations built on the Hive blockchain with full wallet and rewards support.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Hive</span>
+          <span class="project-tag">Web3</span>
+          <span class="project-tag">DApps</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/DomainWarrior" class="project-link" target="_blank" rel="noopener noreferrer">⬡ GitHub →</a>
+          <a href="/posts/hive_dapps/" class="project-link">📄 Case Study →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="80">
+        <div class="project-icon" aria-hidden="true">🤖</div>
+        <h3>Discord Game Bots</h3>
+        <p>Multi-command Discord bots built with Python and discord.py — featuring RPG combat systems, dice games, character creation, and interactive gameplay.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">discord.py</span>
+          <span class="project-tag">Bot</span>
+        </div>
+        <div class="project-links">
+          <a href="/posts/build_a_discord_game_using_python/" class="project-link">📄 Tutorial →</a>
+          <a href="/posts/discord-role-playing-game/"         class="project-link">📄 RPG Guide →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="160">
+        <div class="project-icon" aria-hidden="true">🐍</div>
+        <h3>Django Web Platform</h3>
+        <p>Full-stack web applications using Django — including a Markdown format generator, content management systems, and REST API backends.</p>
+        <div class="project-tags">
+          <span class="project-tag">Django</span>
+          <span class="project-tag">Python</span>
+          <span class="project-tag">REST API</span>
+          <span class="project-tag">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="/posts/build_a_format_generator_using_django-and-python/" class="project-link">📄 Tutorial →</a>
+          <a href="/posts/web-devlopment-with-django/" class="project-link">📄 Guide →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-icon" aria-hidden="true">🎮</div>
+        <h3>Splinterlands Analytics</h3>
+        <p>Strategy guides, battle analysis tools, and earning optimization systems for the Splinterlands blockchain card game on the Hive network.</p>
+        <div class="project-tags">
+          <span class="project-tag">Hive</span>
+          <span class="project-tag">Gaming</span>
+          <span class="project-tag">Play-to-Earn</span>
+        </div>
+        <div class="project-links">
+          <a href="/posts/getting-started-splinterlands-ultimateguide/" class="project-link">📄 Guide →</a>
+          <a href="/posts/mastering-splinterlands-strategies-for-success/" class="project-link">📄 Strategy →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="80">
+        <div class="project-icon" aria-hidden="true">🔒</div>
+        <h3>Security Audit Toolkit</h3>
+        <p>Python-based security utilities and automation scripts for web application scanning, OSINT gathering, and vulnerability assessment workflows.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Security</span>
+          <span class="project-tag">OSINT</span>
+          <span class="project-tag">Automation</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/DomainWarrior" class="project-link" target="_blank" rel="noopener noreferrer">⬡ GitHub →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="project-icon" aria-hidden="true">🔍</div>
+        <h3>Python Security Toolkit</h3>
+        <p>CLI tool for network recon and web security auditing — threaded port scanner, banner grabbing, DNS enumeration, and HTTP security header analysis with pass/fail scoring.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">Security</span>
+          <span class="project-tag">CLI</span>
+          <span class="project-tag">Networking</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/DomainWarrior/python-security-toolkit" class="project-link" target="_blank" rel="noopener noreferrer">⬡ GitHub →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="80">
+        <div class="project-icon" aria-hidden="true">🐝</div>
+        <h3>Hive Dashboard</h3>
+        <p>Real-time Hive blockchain account dashboard — view HIVE, HP, and HBD balances, voting power, and recent posts for any account. Zero dependencies, open index.html.</p>
+        <div class="project-tags">
+          <span class="project-tag">JavaScript</span>
+          <span class="project-tag">Hive API</span>
+          <span class="project-tag">Web App</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/DomainWarrior/hive-dashboard" class="project-link" target="_blank" rel="noopener noreferrer">⬡ GitHub →</a>
+        </div>
+      </article>
+
+      <article class="project-card glass" data-aos="fade-up" data-aos-delay="160">
+        <div class="project-icon" aria-hidden="true">🌐</div>
+        <h3>MissQuibble.com</h3>
+        <p>This very site — a Hugo-powered content platform with 100+ posts covering tech, blockchain, cooking, crafts, and personal development. Fully SEO-optimized.</p>
+        <div class="project-tags">
+          <span class="project-tag">Hugo</span>
+          <span class="project-tag">PaperMod</span>
+          <span class="project-tag">SEO</span>
+          <span class="project-tag">Content</span>
+        </div>
+        <div class="project-links">
+          <a href="/" class="project-link">🔗 Live Site →</a>
+          <a href="https://github.com/DomainWarrior" class="project-link" target="_blank" rel="noopener noreferrer">⬡ GitHub →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     GITHUB
+══════════════════════════════════════════════════════════ -->
+<section id="github" style="background:var(--dark2);" aria-labelledby="github-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;" data-aos="fade-up">
+      <span class="section-tag">// open source</span>
+      <h2 id="github-heading" class="section-title">
+        GitHub <span class="neon-text">activity</span>
+      </h2>
+    </div>
+
+    <div class="github-grid">
+
+      <!-- Stats cards -->
+      <div data-aos="fade-right">
+        <div class="github-stat-grid">
+          <div class="gh-stat-card glass">
+            <span class="gh-stat-num gradient-text" id="gh-repos">—</span>
+            <span class="gh-stat-label">Public Repos</span>
+          </div>
+          <div class="gh-stat-card glass">
+            <span class="gh-stat-num gradient-text" id="gh-followers">—</span>
+            <span class="gh-stat-label">Followers</span>
+          </div>
+          <div class="gh-stat-card glass">
+            <span class="gh-stat-num gradient-text" id="gh-following">—</span>
+            <span class="gh-stat-label">Following</span>
+          </div>
+          <div class="gh-stat-card glass">
+            <span class="gh-stat-num gradient-text" id="gh-gists">—</span>
+            <span class="gh-stat-label">Gists</span>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;" data-aos="fade-up" data-aos-delay="100">
+          <a href="https://github.com/DomainWarrior" target="_blank" rel="noopener noreferrer" class="btn" style="width:100%;justify-content:center;">
+            ⬡ View GitHub Profile
+          </a>
+        </div>
+      </div>
+
+      <!-- Contribution graph + stats image -->
+      <div data-aos="fade-left">
+        <div class="gh-chart-wrap glass" style="padding:16px;">
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=DomainWarrior&show_icons=true&theme=dark&bg_color=0d1117&title_color=00ff88&icon_color=00d4ff&text_color=94a3b8&border_color=1e293b&hide_border=false&count_private=true"
+            alt="DomainWarrior GitHub Stats"
+            loading="lazy"
+          >
+          <span class="gh-username">@DomainWarrior on GitHub</span>
+        </div>
+
+        <div class="glass" style="margin-top:16px;padding:16px;" data-aos="fade-up" data-aos-delay="150">
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=DomainWarrior&layout=compact&theme=dark&bg_color=0d1117&title_color=00ff88&text_color=94a3b8&border_color=1e293b"
+            alt="DomainWarrior Top Languages"
+            loading="lazy"
+            style="width:100%;border-radius:6px;"
+          >
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     BLOG  (pulls live Hugo content)
+══════════════════════════════════════════════════════════ -->
+<section id="blog" aria-labelledby="blog-heading">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:48px;" data-aos="fade-up">
+      <div>
+        <span class="section-tag">// latest writing</span>
+        <h2 id="blog-heading" class="section-title">
+          From the <span class="neon-text">blog</span>
+        </h2>
+      </div>
+      <a href="/posts/" class="btn btn-sm">All Posts →</a>
+    </div>
+
+    <div class="blog-grid">
+      {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
+      {{ if not .Draft }}
+      <a href="{{ .RelPermalink }}" class="blog-card glass" data-aos="fade-up">
+        <div class="blog-card-tag">
+          {{ with index .Params.tags 0 }}{{ . }}{{ else }}Blog{{ end }}
+        </div>
+        <h3>{{ .Title }}</h3>
+        <p>{{ if .Description }}{{ .Description | truncate 100 }}{{ else }}{{ .Summary | truncate 100 }}{{ end }}</p>
+        <div class="blog-card-meta">
+          {{ .Date.Format "Jan 2, 2006" }} &nbsp;·&nbsp; {{ .ReadingTime }} min read
+        </div>
+      </a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 56px;" data-aos="fade-up">
+      <span class="section-tag">// let's work together</span>
+      <h2 id="contact-heading" class="section-title">
+        Start a <span class="neon-text">conversation</span>
+      </h2>
+      <p style="color:var(--muted);margin-top:16px;font-size:15px;">
+        Have a project in mind, need a security audit, or just want to talk tech?
+        I'm currently available for freelance work and consulting engagements.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div data-aos="fade-right">
+        <div class="contact-info-item">
+          <span class="contact-icon" aria-hidden="true">⬡</span>
+          <div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:2px;">GitHub</div>
+            <a href="https://github.com/DomainWarrior" target="_blank" rel="noopener noreferrer">github.com/DomainWarrior</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-icon" aria-hidden="true">🔗</span>
+          <div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:2px;">Hive / Peakd</div>
+            <a href="https://ecency.com/@missquibble" target="_blank" rel="noopener noreferrer">@missquibble</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <div>
+            <div style="font-size:12px;color:var(--muted);margin-bottom:2px;">Availability</div>
+            <span><span class="status-dot" aria-hidden="true" style="margin-right:6px;"></span>Open to remote work worldwide</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div data-aos="fade-left">
+        <!-- To enable email delivery: sign up at formspree.io, create a form,
+             then set data-formspree-id to your form ID (e.g. "xyzabc12") -->
+        <form id="contact-form" class="contact-form" data-formspree-id="" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="form-group">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="Project inquiry / Security audit / etc.">
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:14px;">
+            Send Message →
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════════════ -->
+<footer id="pf-footer">
+  <div class="container footer-inner">
+    <span class="footer-text">
+      © {{ now.Year }} <span class="neon-text">MissQuibble</span> · Built with Hugo &amp; ❤️
+    </span>
+    <nav class="footer-links" aria-label="Social links">
+      <a href="https://github.com/DomainWarrior"     target="_blank" rel="noopener noreferrer" title="GitHub"   aria-label="GitHub">⬡</a>
+      <a href="https://ecency.com/@missquibble"      target="_blank" rel="noopener noreferrer" title="Hive"     aria-label="Hive">🔗</a>
+      <a href="https://www.twitch.tv/yourdestinyis"  target="_blank" rel="noopener noreferrer" title="Twitch"   aria-label="Twitch">🎮</a>
+      <a href="/"                                                                    title="Blog"     aria-label="Blog">✍️</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ══════════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════════ -->
+<!-- particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+<!-- Portfolio JS -->
+<script src="/js/portfolio.js" defer></script>
+
+</body>
+</html>
