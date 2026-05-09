@@ -44,3 +44,29 @@ CREATE INDEX IF NOT EXISTS idx_likes_slug    ON post_likes(post_slug);
 CREATE INDEX IF NOT EXISTS idx_likes_user    ON post_likes(user_id);
 CREATE INDEX IF NOT EXISTS idx_saves_user    ON post_saves(user_id);
 CREATE INDEX IF NOT EXISTS idx_saves_slug    ON post_saves(post_slug);
+
+-- ── Comments ─────────────────────────────────────────────────
+
+CREATE TABLE IF NOT EXISTS post_comments (
+  id         uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id    uuid REFERENCES auth.users(id) ON DELETE CASCADE NOT NULL,
+  post_slug  text NOT NULL,
+  content    text NOT NULL,
+  user_email text,
+  created_at timestamptz DEFAULT now(),
+  CONSTRAINT content_length CHECK (char_length(content) >= 3 AND char_length(content) <= 1000)
+);
+
+ALTER TABLE post_comments ENABLE ROW LEVEL SECURITY;
+
+-- Anyone can read comments
+CREATE POLICY "comments_public_read" ON post_comments FOR SELECT USING (true);
+
+-- Users can only insert their own comments
+CREATE POLICY "comments_own_insert"  ON post_comments FOR INSERT WITH CHECK (auth.uid() = user_id);
+
+-- Users can only delete their own comments
+CREATE POLICY "comments_own_delete"  ON post_comments FOR DELETE USING  (auth.uid() = user_id);
+
+CREATE INDEX IF NOT EXISTS idx_comments_slug ON post_comments(post_slug);
+CREATE INDEX IF NOT EXISTS idx_comments_user ON post_comments(user_id);

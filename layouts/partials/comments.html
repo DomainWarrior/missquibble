@@ -1,0 +1,58 @@
+<section class="mq-comments" id="mq-comments" aria-label="Comments">
+  <div class="mq-comments-inner">
+
+    <header class="mq-comments-header">
+      <h2 class="mq-comments-title">
+        <span aria-hidden="true">💬</span>
+        Comments
+        <span class="mq-comment-count" id="mq-comment-count"></span>
+      </h2>
+    </header>
+
+    {{/* Comment form */}}
+    <div class="mq-comment-form-wrap" id="mq-form-wrap">
+
+      {{/* Signed-out state */}}
+      <div id="mq-comment-gate" class="mq-comment-gate">
+        <p>
+          <button class="mq-gate-btn" id="mq-comment-signin">Sign in</button>
+          to leave a comment.
+        </p>
+      </div>
+
+      {{/* Signed-in state */}}
+      <form class="mq-comment-form hidden" id="mq-comment-form" novalidate>
+        <div class="mq-comment-avatar-row">
+          <span class="mq-cmt-avatar" id="mq-cmt-avatar" aria-hidden="true">◉</span>
+          <span class="mq-cmt-user"   id="mq-cmt-user"></span>
+        </div>
+        <div class="mq-field">
+          <textarea
+            id="mq-cmt-body"
+            class="mq-cmt-textarea"
+            placeholder="Share your thoughts… (be kind)"
+            maxlength="1000"
+            rows="4"
+            aria-label="Comment text"
+            required
+          ></textarea>
+          <div class="mq-cmt-meta-row">
+            <span class="mq-cmt-chars"><span id="mq-cmt-count">0</span> / 1000</span>
+            <button type="submit" class="mq-cmt-submit">Post Comment</button>
+          </div>
+        </div>
+        <p class="mq-cmt-err" id="mq-cmt-err" role="alert" aria-live="polite"></p>
+        <p class="mq-cmt-policy">Comments are moderated. Be respectful — profanity is blocked.</p>
+      </form>
+
+    </div>
+
+    {{/* Comment list */}}
+    <div id="mq-comment-list" class="mq-comment-list">
+      <p class="mq-cmt-loading" id="mq-cmt-loading">Loading comments…</p>
+    </div>
+
+  </div>
+</section>
+
+<script src="/js/mq-comments.js" defer></script>
