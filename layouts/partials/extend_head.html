@@ -1,16 +1,18 @@
 {{- $url := getenv "HUGO_SUPABASE_URL" -}}
 {{- $key := getenv "HUGO_SUPABASE_ANON_KEY" -}}
-{{- if and $url $key }}
-<script>
-  window.__MQ = {
-    url:   {{ $url | jsonify }},
-    key:   {{ $key | jsonify }},
-    slug:  {{ .RelPermalink | jsonify }},
-    title: {{ .Title | jsonify }},
-    desc:  {{ .Description | jsonify }}
-  };
-</script>
-{{ end -}}
+{{- if and $url $key -}}
+<meta name="mq-supabase-url" content="{{ $url }}">
+<meta name="mq-supabase-key" content="{{ $key }}">
+{{- end }}
+<meta name="mq-slug"  content="{{ .RelPermalink }}">
+<meta name="mq-title" content="{{ .Title }}">
+<meta name="mq-desc"  content="{{ .Description }}">
+
+{{/* Security headers — applied to every blog/home page */}}
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' cdn.jsdelivr.net 'unsafe-inline'; style-src 'self' fonts.googleapis.com 'unsafe-inline'; font-src fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'{{ with $url }} {{ . }}{{ end }}; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';">
 <link rel="stylesheet" href="/css/mq-actions.css">
 
 {{/* JSON-LD structured data */}}

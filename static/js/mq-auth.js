@@ -4,10 +4,9 @@
 window.MQ = window.MQ || {};
 
 /* ── Supabase client ───────────────────────────────────────── */
-const cfg = window.__MQ;
-const sb  = cfg?.url && cfg?.key
-  ? window.supabase?.createClient(cfg.url, cfg.key)
-  : null;
+const _url = document.querySelector('meta[name="mq-supabase-url"]')?.content;
+const _key = document.querySelector('meta[name="mq-supabase-key"]')?.content;
+const sb   = _url && _key ? window.supabase?.createClient(_url, _key) : null;
 
 window.MQ.sb   = sb;
 window.MQ.user = null;

@@ -2,7 +2,7 @@
 /* ── MissQuibble Post Actions — Like · Save · Share ─────────── */
 
 const sb   = window.MQ?.sb;
-const slug = window.__MQ?.slug || location.pathname;
+const slug = document.querySelector('meta[name="mq-slug"]')?.content || location.pathname;
 const url  = location.href;
 const title = document.title;
 
@@ -98,8 +98,8 @@ saveBtn?.addEventListener('click', async () => {
     await sb.from('post_saves').insert({
       user_id:    uid,
       post_slug:  slug,
-      post_title: window.__MQ?.title || document.title,
-      post_desc:  window.__MQ?.desc  || '',
+      post_title: document.querySelector('meta[name="mq-title"]')?.content || document.title,
+      post_desc:  document.querySelector('meta[name="mq-desc"]')?.content  || '',
       post_url:   url,
     });
   } else {
