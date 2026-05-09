@@ -1,0 +1,87 @@
+{{ define "main" }}
+<article class="post-single" style="max-width:860px;margin:0 auto;padding:40px 20px 120px;">
+
+  <header class="post-header">
+    <h1 class="post-title">📚 Reading List</h1>
+    <p style="color:var(--secondary);font-size:14px;margin-top:8px;">Posts you've saved for later.</p>
+  </header>
+
+  <div id="rl-auth-msg" style="display:none;font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--secondary);margin-top:32px;">
+    <a href="#" id="rl-signin-link" style="color:#00ff88;">Sign in</a> to see your saved posts.
+  </div>
+
+  <div id="rl-loading" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--secondary);margin-top:32px;">
+    Loading…
+  </div>
+
+  <div id="rl-grid" class="mq-rl-grid" style="display:none;"></div>
+
+  <p id="rl-empty" class="mq-rl-empty" style="display:none;">
+    No saved posts yet — hit 🔖 on any post to save it here.
+  </p>
+
+</article>
+{{ end }}
+
+{{ define "scripts" }}
+<script>
+document.addEventListener('DOMContentLoaded', async () => {
+  const loading  = document.getElementById('rl-loading');
+  const grid     = document.getElementById('rl-grid');
+  const empty    = document.getElementById('rl-empty');
+  const authMsg  = document.getElementById('rl-auth-msg');
+  const signinLk = document.getElementById('rl-signin-link');
+
+  signinLk?.addEventListener('click', e => { e.preventDefault(); window.MQ?.openAuth?.('in'); });
+
+  // Wait for auth to resolve
+  await new Promise(r => setTimeout(r, 600));
+
+  const sb   = window.MQ?.sb;
+  const user = window.MQ?.user;
+
+  if (!sb || !user) {
+    loading.style.display  = 'none';
+    authMsg.style.display  = 'block';
+    return;
+  }
+
+  const { data, error } = await sb
+    .from('post_saves')
+    .select('post_slug, post_title, post_desc, post_url, created_at')
+    .eq('user_id', user.id)
+    .order('created_at', { ascending: false });
+
+  loading.style.display = 'none';
+
+  if (error || !data?.length) {
+    empty.style.display = 'block';
+    return;
+  }
+
+  grid.style.display = 'grid';
+  data.forEach(post => {
+    const card = document.createElement('div');
+    card.className = 'mq-rl-card';
+    const date = new Date(post.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    card.innerHTML = `
+      <a href="${escHtml(post.post_url || post.post_slug)}" class="mq-rl-title">${escHtml(post.post_title || post.post_slug)}</a>
+      ${post.post_desc ? `<p class="mq-rl-desc">${escHtml(post.post_desc.slice(0, 120))}…</p>` : ''}
+      <span class="mq-rl-meta">Saved ${date}</span>
+      <button class="mq-rl-remove" data-slug="${escHtml(post.post_slug)}">Remove</button>
+    `;
+    card.querySelector('.mq-rl-remove')?.addEventListener('click', async function() {
+      const slug = this.dataset.slug;
+      await sb.from('post_saves').delete().eq('user_id', user.id).eq('post_slug', slug);
+      card.remove();
+      if (!grid.children.length) { grid.style.display = 'none'; empty.style.display = 'block'; }
+    });
+    grid.appendChild(card);
+  });
+});
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+{{ end }}

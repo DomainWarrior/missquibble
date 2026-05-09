@@ -1,0 +1,87 @@
+{{/* Action bar — single posts only */}}
+{{- if and .IsPage (eq .Section "posts") }}
+<div id="mq-action-bar" class="mq-action-bar" role="toolbar" aria-label="Post actions">
+  <button id="mq-like-btn" class="mq-btn" aria-label="Like this post" aria-pressed="false">
+    <span class="mq-btn-icon" aria-hidden="true">♡</span>
+    <span id="mq-like-count" class="mq-btn-label"></span>
+  </button>
+  <button id="mq-save-btn" class="mq-btn" aria-label="Save to reading list" aria-pressed="false">
+    <span class="mq-btn-icon" aria-hidden="true">🔖</span>
+    <span class="mq-btn-label">Save</span>
+  </button>
+  <div class="mq-share-wrap">
+    <button id="mq-share-btn" class="mq-btn" aria-label="Share post" aria-expanded="false" aria-haspopup="true">
+      <span class="mq-btn-icon" aria-hidden="true">↗</span>
+      <span class="mq-btn-label">Share</span>
+    </button>
+    <div id="mq-share-menu" class="mq-share-menu" role="menu" aria-hidden="true">
+      <button class="mq-share-opt" data-share="copy"    role="menuitem">📋 Copy link</button>
+      <a      class="mq-share-opt" id="mq-share-x"      role="menuitem" target="_blank" rel="noopener noreferrer">𝕏 Share on X</a>
+      <a      class="mq-share-opt" id="mq-share-hive"   role="menuitem" target="_blank" rel="noopener noreferrer">🐝 Share on Hive</a>
+    </div>
+  </div>
+</div>
+{{- end }}
+
+{{/* Auth modal — every page */}}
+<div id="mq-overlay" class="mq-overlay" role="dialog" aria-modal="true" aria-labelledby="mq-modal-title" aria-hidden="true">
+  <div class="mq-modal">
+    <button class="mq-modal-close" id="mq-modal-close" aria-label="Close">&times;</button>
+    <div class="mq-modal-logo" aria-hidden="true">MQ<span>.</span></div>
+    <h2 class="mq-modal-title" id="mq-modal-title">Welcome back</h2>
+
+    <div class="mq-tabs" role="tablist">
+      <button class="mq-tab active" data-tab="in"  role="tab" aria-selected="true"  aria-controls="mq-form-in">Sign In</button>
+      <button class="mq-tab"        data-tab="up"  role="tab" aria-selected="false" aria-controls="mq-form-up">Create Account</button>
+    </div>
+
+    <form id="mq-form-in" class="mq-form active" role="tabpanel" novalidate>
+      <div class="mq-field">
+        <label for="mq-in-email">Email</label>
+        <input type="email" id="mq-in-email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="mq-field">
+        <label for="mq-in-pw">Password</label>
+        <input type="password" id="mq-in-pw" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <p class="mq-err" id="mq-in-err" role="alert" aria-live="polite"></p>
+      <button type="submit" class="mq-submit">Sign In</button>
+      <button type="button" class="mq-link-btn" id="mq-forgot">Forgot password?</button>
+    </form>
+
+    <form id="mq-form-up" class="mq-form" role="tabpanel" novalidate>
+      <div class="mq-field">
+        <label for="mq-up-email">Email</label>
+        <input type="email" id="mq-up-email" placeholder="you@example.com" autocomplete="email" required>
+      </div>
+      <div class="mq-field">
+        <label for="mq-up-pw">Password</label>
+        <input type="password" id="mq-up-pw" placeholder="Min. 8 characters" autocomplete="new-password" required minlength="8">
+      </div>
+      <p class="mq-err" id="mq-up-err" role="alert" aria-live="polite"></p>
+      <button type="submit" class="mq-submit">Create Account</button>
+      <p class="mq-note">Free · No spam · Cancel anytime</p>
+    </form>
+  </div>
+</div>
+
+{{/* User widget — fixed top-right */}}
+<div id="mq-widget" class="mq-widget" aria-label="Account">
+  <div id="mq-widget-out" class="mq-widget-state">
+    <button class="mq-widget-btn" id="mq-widget-signin" aria-label="Sign in">Sign In</button>
+  </div>
+  <div id="mq-widget-in" class="mq-widget-state hidden">
+    <button class="mq-widget-avatar" id="mq-avatar-btn" aria-label="Account menu" aria-expanded="false" aria-haspopup="true">
+      <span id="mq-avatar-char" aria-hidden="true">◉</span>
+    </button>
+    <div class="mq-avatar-menu" id="mq-avatar-menu" role="menu" aria-hidden="true">
+      <span class="mq-avatar-email" id="mq-avatar-email"></span>
+      <a href="/reading-list/" class="mq-menu-item" role="menuitem">📚 Reading List</a>
+      <button class="mq-menu-item mq-signout" id="mq-signout" role="menuitem">Sign Out</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" crossorigin="anonymous"></script>
+<script src="/js/mq-auth.js"    defer></script>
+<script src="/js/mq-actions.js" defer></script>

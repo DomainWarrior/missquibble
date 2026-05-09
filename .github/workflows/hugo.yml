@@ -45,6 +45,8 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/New_York
+          HUGO_SUPABASE_URL: ${{ secrets.HUGO_SUPABASE_URL }}
+          HUGO_SUPABASE_ANON_KEY: ${{ secrets.HUGO_SUPABASE_ANON_KEY }}
         run: |
           hugo --gc --minify --baseURL "https://missquibble.com/"
 

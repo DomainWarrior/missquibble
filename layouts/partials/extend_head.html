@@ -1,0 +1,14 @@
+{{- $url := getenv "HUGO_SUPABASE_URL" -}}
+{{- $key := getenv "HUGO_SUPABASE_ANON_KEY" -}}
+{{- if and $url $key }}
+<script>
+  window.__MQ = {
+    url:  {{ $url | jsonify }},
+    key:  {{ $key | jsonify }},
+    slug: {{ .RelPermalink | jsonify }},
+    title: {{ .Title | jsonify }},
+    desc: {{ .Description | jsonify }}
+  };
+</script>
+{{ end -}}
+<link rel="stylesheet" href="/css/mq-actions.css">
